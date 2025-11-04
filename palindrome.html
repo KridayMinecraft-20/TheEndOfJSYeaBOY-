@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Palindrome App</h1>
+    <hr>
+    <br>
+<body>
+    <script>
+        function palindrome(mystring){
+
+            var input = mystring.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+
+            var reversedInput = input.split('').reverse().join('');
+            if (input == reversedInput) {
+                document.write("<div>" + mystring + " is a palindrome </div>");
+            }
+
+            else {
+                document.write("<div>" + mystring + " is not a palindrome </div>");
+            }
+
+        }
+         
+        myword = prompt("Please enter a word sentence or phrase.");
+
+        palindrome(myword);
+
+    </script>
+</html>
