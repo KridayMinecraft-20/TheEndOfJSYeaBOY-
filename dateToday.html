@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Date</title>
+  <style>
+    body {
+      font-family: "Comic Sans MS", sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      margin-top: 100px;
+      color: #333;
+    }
+
+    .container {
+      background-color: white;
+      border: 2px solid #87ceeb;
+      border-radius: 15px;
+      display: inline-block;
+      padding: 30px 50px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #0066cc;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .date {
+      font-size: 1.8em;
+      color: #003366;
+      font-weight: bold;
+    }
+
+   
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1> Today's Date</h1>
+    <div class="date" id="dateDisplay"></div>
+  </div>
+
+  
+  <script>
+    
+    const today = new Date();
+
+    const day = today.getDate();
+    const monthNames = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    const month = monthNames[today.getMonth()];
+    const year = today.getFullYear();
+
+    
+    document.getElementById("dateDisplay").textContent = `${month} ${day}, ${year}`;
+  </script>
+
+</body>
+</html>
