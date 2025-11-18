@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    font-family: Jokerman;
+}
+
+.guddice{
+    color: coral;
+}
+
+#dice{
+    font-size: 320px;
+}
+
+#dice:hover{
+    color: brown;
+    cursor: pointer;
+    
+}
